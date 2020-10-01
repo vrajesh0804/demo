@@ -11,7 +11,7 @@ class Login extends CI_Controller {
 		1 - Too Many Login Attempts
 		2 - Bad Credentials
 		*/
-		$data["error"] = 0;
+		$data["error"] = 0; //Default Number
 		if ($this->input->post()){ 
 			if ($this->session->userdata("loginattempts")) {
 				echo "2";
