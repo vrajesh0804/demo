@@ -7,7 +7,7 @@ class Login extends CI_Controller {
 		/*
 		Error List:
 		0 - No Error
-		1 - Too Many Login Attempts
+		1 - Too Many Login AttemptS
 		2 - Bad Credentials
 		*/
 		$data["error"] = 0; <!--Default Number-->
