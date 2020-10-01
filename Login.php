@@ -13,37 +13,52 @@ class Login extends CI_Controller {
 		*/
 		$data["error"] = 0;
 		if ($this->input->post()){ 
-			if ($this->session->userdata("loginattempts")) {
+			if ($this->session->userdata("loginattempts")) 
+			{
 				echo "2";
 				$postData = $this->input->post();
 				$loginattempts = $this->session->userdata("loginattempts");
-				if ($loginattempts > 4) { 
+				if ($loginattempts > 4) 
+				{ 
 					$data["error"] = 1;
 					$this->load->view('login', $data);
-				 } else {
+				 } 
+				else 
+				{
 				 	$auth = $this->Admin_model->adminLogin($postData);
-					if ($auth == true) {
+					if ($auth == true) 
+					{
 						redirect(base_url(), "auto");
-					} else {
+					} 
+					else 
+					{
 						$data["error"] = 2;
 						$this->load->view('login', $data);
 					}
 				 } 
-			} else {
+			} 
+			else 
+			{
 				echo "1";
 				$this->session->set_userdata("loginattempts", 0);
 				$postData = $this->input->post();
 				$auth = $this->Admin_model->adminLogin($postData);
-				if ($auth == true) {
+				if ($auth == true) 
+				{
 					redirect(base_url(), "auto");
-				} else {
+				} 
+				else 
+				{
 					$data["error"] = 2;
 					$this->load->view('login', $data);
 				}
 			} 
-		} else {
+		} 
+		else 
+		{
 			$this->load->view('login', $data);
 		}
 		
 	}
 }
+//  This changes were made by Hardik. re arranged the brackets to understand the flow of program.
