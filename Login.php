@@ -12,7 +12,7 @@ class Login extends CI_Controller {
 		*/
 		$data["error"] = 0;
 		if ($this->input->post()){ 
-			if ($this->session->userdata("loginattempts")) 
+			if ($this->session->userdata("loginattempts"))  // login attaempts
 			{
 				echo "2";
 				$postData = $this->input->post();
@@ -20,7 +20,7 @@ class Login extends CI_Controller {
 				if ($loginattempts > 4) 
 				{ 
 					$data["error"] = 1;
-					$this->load->view('login', $data);
+					$this->load->view('login', $data);	// view data 
 				 } 
 				else 
 				{
@@ -59,4 +59,4 @@ class Login extends CI_Controller {
 		}
 		}
 }
-//  This changes were made by Hardik. re arranged the brackets to understand the flow of program.
+// Login Page with php
