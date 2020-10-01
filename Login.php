@@ -2,7 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
-
 	public function index()
 	{	
 		/*
@@ -58,7 +57,6 @@ class Login extends CI_Controller {
 		{
 			$this->load->view('login', $data);
 		}
-		
-	}
+		}
 }
 //  This changes were made by Hardik. re arranged the brackets to understand the flow of program.
