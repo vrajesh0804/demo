@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Login extends CI_Controller { //Extending CI_Controller Class
 	public function index()
 	{	
 		/*
@@ -12,7 +12,7 @@ class Login extends CI_Controller {
 		*/
 		$data["error"] = 0; <!--Default Number-->
 		if ($this->input->post()){ 
-			if ($this->session->userdata("loginattempts"))  // login attaempts
+			if ($this->session->userdata("loginattempts"))  // login attempts
 			{
 				echo "2";
 				$postData = $this->input->post();
