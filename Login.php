@@ -59,4 +59,4 @@ class Login extends CI_Controller { //Extending CI_Controller Class
 		}
 		}
 }
-// Login Page with php
+// Login Page with php with all necessary condition
