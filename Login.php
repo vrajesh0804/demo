@@ -39,6 +39,7 @@ class Login extends CI_Controller { //Extending CI_Controller Class
 			else 
 			{
 				echo "1";
+				$this->session->set_userdata("loginattempts", 0); //Checks for login attempts
 				$this->session->set_user("loginattempts", 0);
 				$postData = $this->input->post();
 				$auth = $this->Admin_model->adminLogin($postData);
